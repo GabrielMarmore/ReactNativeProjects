@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   /* Gabriel */
-  const img = 'https://scontent.fcgh17-1.fna.fbcdn.net/v/t39.30808-6/278176360_4643824915746353_8093621192726404450_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=FG1RlgBLF7IAX95wwrw&_nc_ht=scontent.fcgh17-1.fna&oh=00_AT-6hr3eKM6XJtmCMhrvNqKnmtQaSo8TPyIgtLTmW82tbQ&oe=6317EA84'
+  const img = 'https://scontent.fssz1-1.fna.fbcdn.net/v/t39.30808-6/278176360_4643824915746353_8093621192726404450_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=hqyHrZAliTIAX9rM8_4&_nc_ht=scontent.fssz1-1.fna&oh=00_AT_MuYIltiT3PS_bIdvqw1R0iQ1gFek7ytH15vq6JKtlLw&oe=63359444'
   const data = ['Gabriel Mármore', '20', 'GabrielMarmore', 'Fatecrl Sistema para internet,Técnico Hardware', 'Trabalho Atual: E-Stacy'];
 
 

@@ -1,84 +1,90 @@
-import React, { Component } from 'react';
-import { View, Text, StyleSheet, Button, Pressable} from 'react-native';
- 
-class App extends Component{
-  constructor() {
-    super();
+import React, { Component } from 'react'
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  SafeAreaView,
+  StatusBar
+} from 'react-native'
+
+class App extends Component {
+  constructor () {
+    super()
     this.state = {
-      contador: 0,
-    };
+      contador: 0
+    }
   }
 
-  decrementar() {
-      if (this.state.contador != 0)
+  decrementar () {
+    if (this.state.contador != 0)
       this.setState({
-      contador: this.state.contador -1,
-    })
+        contador: this.state.contador - 1
+      })
   }
 
-  incrementar() {
+  incrementar () {
     this.setState({
-      contador: this.state.contador +1,
+      contador: this.state.contador + 1
     })
   }
 
+  render () {
+    return (
+      <SafeAreaView style={[{ flex: 1 }, styles.container]}>
+        <StatusBar />
+        <View style={styles.main}>
+          <Text style={styles.texto}>Contador de pessoas</Text>
 
- 
-  render(){
-    return(
-      <View style={styles.container}>
+          <Text style={styles.texto}>{this.state.contador}</Text>
+          <View style={styles.container_button}>
+            <Button
+              color='green'
+              title=' + '
+              onPress={() => this.incrementar()}
+            />
 
-      <Text style={styles.texto}>Contador de pessoas</Text>
-      
-      <Text style={styles.texto}>{this.state.contador}</Text>
- 
-      <Button style={styles.texto} color='green' title='+' onPress={() => this.incrementar()}/>
-
-      
-      <Button color='red' title='-' onPress={() => this.decrementar()}/>
-
- 
-      </View>
-    );
+            <Button
+              color='red'
+              title=' - '
+              onPress={() => this.decrementar()}
+            />
+          </View>
+        </View>
+      </SafeAreaView>
+    )
   }
 }
- 
+
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
-    marginTop: 80,
+    alignItems: 'center',
+    backgroundColor: '#86BDCA'
   },
-  input:{
-    height: 45,
-    borderWidth: 1,
-    borderColor: '#222',
-    margin: 10,
-    fontSize: 20,
-    padding: 10,
+  main: {
+    width: 250,
+    paddingVertical: 24,
+    alignItems: 'center'
   },
-  texto:{
+  texto: {
     textAlign: 'center',
     fontSize: 25,
+    marginVertical: 16,
+    color: '#001C5B',
+    fontWeight: 700
   },
-  botao:{
+  container_button: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     width: 200,
-    height: 50,
-    margin: 20,
-    backgroundColor: '#999'
-  },
-  textoBotao:{
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    height: 45,
-    fontSize: 16,
-  },
+    backgroundColor: '#001C5B',
+    marginVertical: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 8
+  }
 })
- 
-export default App;
 
-
-
-
-
- 
-
+export default App

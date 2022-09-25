@@ -42,7 +42,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.viewContainer}>
+      <View style={styles.container}>
         <Text style={styles.text}>Peso (kg)</Text>
         <TextInput
           style={styles.textInput}
@@ -59,6 +59,8 @@ export default class App extends React.Component {
           placeholder='Altura'
           keyboardType={'numeric'}
         />
+        <Text style={{marginVertical: 40, textAlign: 'center'}}> Informe a altura usando o ponto ( . ) como sepadador. Exemplo: 1.70 </Text>
+
         <Separator />
         <Button
           onPress={this.calculaIMC}
